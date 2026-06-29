@@ -1,0 +1,9 @@
+<svg width="1400" height="90" viewBox="0 0 1400 90" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Soft research wave divider</title>
+  <desc id="desc">A thin wave divider with violet, blue, and warm gold accents.</desc>
+  <path d="M0 47C117 10 242 8 374 40C511 74 612 89 742 50C878 9 1004 7 1130 41C1235 70 1311 75 1400 43" stroke="#A5B4FC" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M0 57C132 31 241 36 350 58C475 83 603 83 719 55C852 24 972 23 1115 56C1232 83 1310 78 1400 58" stroke="#7DD3FC" stroke-opacity="0.65" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M113 45H234M1055 45H1180" stroke="#FDE68A" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="240" cy="45" r="4" fill="#FDE68A"/>
+  <circle cx="1050" cy="45" r="4" fill="#FDE68A"/>
+</svg>
