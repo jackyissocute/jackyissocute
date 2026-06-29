@@ -29,9 +29,7 @@
 
 ## About Me
 
-<p align="left">
-  <img src="assets/pets/cat-about.gif" alt="Pixel cat sitting and blinking" width="88" />
-</p>
+<img src="assets/pets/cat-about.gif" alt="Pixel cat sitting and blinking" width="88" align="left" />
 
 I am Jacky Lin, an undergraduate student at Duke Kunshan University interested in the quiet places where physics, biology, and computation begin to overlap. My work centers on molecular simulation, research automation, and AI-assisted tools that make scientific workflows more reproducible and readable.
 
@@ -39,9 +37,7 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Research Compass
 
-<p align="right">
-  <img src="assets/pets/cat-compass.gif" alt="Pixel cat walking and looking around" width="88" />
-</p>
+<img src="assets/pets/cat-compass.gif" alt="Pixel cat walking and looking around" width="88" align="right" />
 
 | Direction | What I am exploring |
 | --- | --- |
@@ -53,9 +49,9 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Toolkit
 
-<p align="left">
-  <img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" />
-</p>
+<img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" align="left" />
+
+<br clear="both" />
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -72,9 +68,7 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Featured Work
 
-<p align="right">
-  <img src="assets/pets/cat-featured.gif" alt="Pixel cat walking" width="88" />
-</p>
+<img src="assets/pets/cat-featured.gif" alt="Pixel cat walking" width="88" align="right" />
 
 | Project | What it means |
 | --- | --- |
@@ -85,9 +79,7 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Current Focus
 
-<p align="left">
-  <img src="assets/pets/cat-focus.gif" alt="Pixel cat running playfully" width="88" />
-</p>
+<img src="assets/pets/cat-focus.gif" alt="Pixel cat running playfully" width="88" align="left" />
 
 - Improving computational research workflows so simulation projects are easier to reproduce, review, and extend.
 - Building Python and R analysis habits around molecular data, document data, and research notes.
@@ -96,9 +88,9 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## GitHub Snapshot
 
-<p align="right">
-  <img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" />
-</p>
+<img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" align="right" />
+
+<br clear="both" />
 
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=jackyissocute&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="Jacky's GitHub stats" />

@@ -8,7 +8,7 @@ export const FRAME_SIZE = 64;
 export const OUTPUT_SCALE = 2;
 export const FPS = 10;
 
-/** @type {Array<{ id: string, file: string, source: string, frameCount: number, fps?: number }>} */
+/** @type {Array<{ id: string, file: string, source: string, frameCount: number, fps?: number, flip?: boolean }>} */
 export const SECTION_PETS = [
   {
     id: "about",
@@ -16,6 +16,7 @@ export const SECTION_PETS = [
     source: "idle.png",
     frameCount: 7,
     fps: 8,
+    flip: false,
   },
   {
     id: "compass",
@@ -23,6 +24,7 @@ export const SECTION_PETS = [
     source: "walk.png",
     frameCount: 7,
     fps: 9,
+    flip: true,
   },
   {
     id: "toolkit",
@@ -30,6 +32,7 @@ export const SECTION_PETS = [
     source: "attack.png",
     frameCount: 3,
     fps: 10,
+    flip: false,
   },
   {
     id: "featured",
@@ -37,6 +40,7 @@ export const SECTION_PETS = [
     source: "walk.png",
     frameCount: 7,
     fps: 12,
+    flip: true,
   },
   {
     id: "focus",
@@ -44,6 +48,7 @@ export const SECTION_PETS = [
     source: "run.png",
     frameCount: 7,
     fps: 14,
+    flip: false,
   },
   {
     id: "snapshot",
@@ -51,5 +56,6 @@ export const SECTION_PETS = [
     source: "idle.png",
     frameCount: 7,
     fps: 6,
+    flip: true,
   },
 ];

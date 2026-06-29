@@ -53,7 +53,17 @@ function stripBlackBackground(canvas) {
   return canvas;
 }
 
-function extractFrame(stripImage, frameIndex) {
+function flipHorizontal(frameCanvas) {
+  const flipped = createCanvas(FRAME_SIZE, FRAME_SIZE);
+  const ctx = flipped.getContext("2d");
+  ctx.clearRect(0, 0, FRAME_SIZE, FRAME_SIZE);
+  ctx.translate(FRAME_SIZE, 0);
+  ctx.scale(-1, 1);
+  ctx.drawImage(frameCanvas, 0, 0);
+  return flipped;
+}
+
+function extractFrame(stripImage, frameIndex, flip = false) {
   const canvas = createCanvas(FRAME_SIZE, FRAME_SIZE);
   const ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, FRAME_SIZE, FRAME_SIZE);
@@ -68,7 +78,8 @@ function extractFrame(stripImage, frameIndex) {
     FRAME_SIZE,
     FRAME_SIZE,
   );
-  return stripBlackBackground(canvas);
+  const cleaned = stripBlackBackground(canvas);
+  return flip ? flipHorizontal(cleaned) : cleaned;
 }
 
 function upscaleFrame(frameCanvas) {
@@ -91,7 +102,7 @@ async function buildPetGif(pet) {
   const gif = GIFEncoder();
 
   for (let i = 0; i < pet.frameCount; i++) {
-    const frame = extractFrame(strip, i);
+    const frame = extractFrame(strip, i, pet.flip ?? false);
     const canvas = upscaleFrame(frame);
     const { data, width, height } = canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height);
     const palette = quantize(data, 64, QUANT_OPTS);
@@ -122,7 +133,7 @@ export async function buildAllPets() {
     const sizeKb = (bytes.length / 1024).toFixed(1);
     const dims = `${FRAME_SIZE * OUTPUT_SCALE}x${FRAME_SIZE * OUTPUT_SCALE}`;
     results.push({ ...pet, outPath, sizeKb, dims });
-    console.log(`  ${pet.file} (${sizeKb} KB, ${dims}, ${pet.frameCount} frames @ ${pet.fps ?? 10} fps)`);
+    console.log(`  ${pet.file} (${sizeKb} KB, ${dims}, ${pet.frameCount} frames @ ${pet.fps ?? 10} fps${pet.flip ? ", flipped" : ""})`);
   }
 
   return results;
