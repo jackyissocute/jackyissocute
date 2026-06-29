@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/wave-divider.png?v=2" alt="" width="100%" />
+  <img src="assets/section-divider.png" alt="" width="100%" />
 </p>
 
 ## About Me
