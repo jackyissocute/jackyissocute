@@ -28,7 +28,7 @@
 </p>
 
 <h2>
-  <img src="assets/pets/cat-about.gif" alt="" width="56" align="left" />
+  <img src="assets/pets/cat-about.gif" alt="" width="96" align="left" />
   About Me
 </h2>
 <br clear="both" />
@@ -39,7 +39,7 @@ I like building systems that help research move with more clarity: simulation fo
 
 <h2>
   Research Compass
-  <img src="assets/pets/cat-compass.gif" alt="" width="56" align="right" />
+  <img src="assets/pets/cat-compass.gif" alt="" width="96" align="right" />
 </h2>
 <br clear="both" />
 
@@ -52,7 +52,7 @@ I like building systems that help research move with more clarity: simulation fo
 | Medical physics | Computational foundations for future graduate study and applied biomedical modeling |
 
 <h2>
-  <img src="assets/pets/cat-toolkit.gif" alt="" width="56" align="left" />
+  <img src="assets/pets/cat-toolkit.gif" alt="" width="96" align="left" />
   Toolkit
 </h2>
 <br clear="both" />
@@ -72,7 +72,7 @@ I like building systems that help research move with more clarity: simulation fo
 
 <h2>
   Featured Work
-  <img src="assets/pets/cat-featured.gif" alt="" width="56" align="right" />
+  <img src="assets/pets/cat-featured.gif" alt="" width="96" align="right" />
 </h2>
 <br clear="both" />
 
@@ -84,7 +84,7 @@ I like building systems that help research move with more clarity: simulation fo
 | [Supplier Document Intelligence](https://github.com/jackyissocute/supplier-doc-intelligence) | OCR, PDF extraction, and AI-assisted document processing inspired by an externship-style Pfizer project. |
 
 <h2>
-  <img src="assets/pets/cat-focus.gif" alt="" width="56" align="left" />
+  <img src="assets/pets/cat-focus.gif" alt="" width="96" align="left" />
   Current Focus
 </h2>
 <br clear="both" />
@@ -96,7 +96,7 @@ I like building systems that help research move with more clarity: simulation fo
 
 <h2>
   GitHub Snapshot
-  <img src="assets/pets/cat-snapshot.gif" alt="" width="56" align="right" />
+  <img src="assets/pets/cat-snapshot.gif" alt="" width="96" align="right" />
 </h2>
 <br clear="both" />
 

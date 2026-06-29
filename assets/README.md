@@ -8,7 +8,7 @@ This folder contains the local visual assets used by the GitHub profile README.
 - `banner-classic.svg` - Original static SVG artwork (soft cinematic research theme). Kept as a fallback reference.
 - `neon-divider.gif` - Animated transparent cyberpunk divider (cyan + magenta intersecting lines with crossing flicker).
 - `neon-divider.png` - Static poster frame from the divider animation.
-- `pets/` - Section pixel cats (256×256 transparent GIFs, one per README heading). See below.
+- `pets/` - Section pixel cats (448×448 transparent GIFs, one per README heading). See below.
 - `section-divider.gif` - Deprecated previous divider asset.
 - `wave-divider.svg` - Source SVG for the divider.
 - `wave-divider.png` - Deprecated; kept for reference.
@@ -44,7 +44,7 @@ npm install
 npm run generate:pet
 ```
 
-This writes all six GIFs to `assets/pets/`. Each cat is rendered on a 64×64 logical canvas (256×256 output) with 2× pixel scaling for crisp visibility beside section titles.
+This writes all six GIFs to `assets/pets/`. Each cat is rendered on a 112×112 logical canvas (448×448 output) with 3× pixel scaling for a detailed face, body, and tail beside section titles. Display at ~96px width in the README.
 
 ## External Dynamic Services
 

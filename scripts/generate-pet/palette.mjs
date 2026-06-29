@@ -1,7 +1,7 @@
-export const W = 64;
-export const H = 64;
+export const W = 112;
+export const H = 112;
 export const SCALE = 4;
-export const PIXEL = 2;
+export const PIXEL = 3;
 
 export const PALETTE = {
   ".": null,
@@ -9,9 +9,11 @@ export const PALETTE = {
   O: "#E8954A",
   D: "#C46B28",
   N: "#FF9999",
+  M: "#FF7777",
   E: "#222222",
   W: "#FFFFFF",
   P: "#FFB4B4",
+  I: "#FFE8D0",
 };
 
 export function drawSprite(ctx, rows, x, y, bob = 0, pixelSize = PIXEL) {
