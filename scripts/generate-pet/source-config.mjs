@@ -32,6 +32,7 @@ export const SECTION_PETS = [
     frameCount: 3,
     fps: 10,
     animation: "loop",
+    flip: true,
   },
   {
     id: "focus",

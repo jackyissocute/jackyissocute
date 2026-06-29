@@ -135,6 +135,7 @@ I like building systems that help research move with more clarity: simulation fo
 <tr>
 <td valign="bottom" align="right">
 
+<strong>Research Mantra</strong><br />
 <em>"What I cannot create, I do not understand."</em><br />
 — Richard Feynman<br />
 <sub>Pixel cat sprites by <a href="https://opengameart.org/content/gray-cat-asset-pack">Krystsina Staselovich</a> (CC-BY)</sub>
