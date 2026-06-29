@@ -18,6 +18,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_GIF = join(__dirname, "../../assets/section-divider.gif");
 const OUT_PNG = join(__dirname, "../../assets/section-divider.png");
 
+const QUANT_OPTS = {
+  format: "rgba4444",
+  oneBitAlpha: true,
+  clearAlpha: true,
+  clearAlphaThreshold: 127,
+  clearAlphaColor: 0x00,
+};
+
 const FPS = 12;
 const DURATION = 2.8;
 const FRAME_COUNT = Math.round(FPS * DURATION);
@@ -32,6 +40,7 @@ const anim = {
   scanX: -5,
   scanIntensity: 0.05,
   dataOffset: 0,
+  intersectBurst: 0,
 };
 
 function sync() {
@@ -42,13 +51,25 @@ function sync() {
   state.scanX = anim.scanX;
   state.scanIntensity = anim.scanIntensity;
   state.dataOffset = anim.dataOffset;
+  state.intersectBurst = anim.intersectBurst;
+}
+
+function findTransparentIndex(palette) {
+  for (let i = 0; i < palette.length; i++) {
+    const c = palette[i];
+    if (c.length === 4 && c[3] === 0) return i;
+  }
+  for (let i = 0; i < palette.length; i++) {
+    const c = palette[i];
+    if (c[0] === 0 && c[1] === 0 && c[2] === 0) return i;
+  }
+  return 0;
 }
 
 function buildTimeline() {
   const tl = gsap.timeline({ repeat: -1, repeatDelay: 0, paused: true });
 
   tl.to(anim, { time: DURATION, duration: DURATION, ease: "none" }, 0);
-  tl.to(anim, { dataOffset: 40, duration: DURATION, ease: "none" }, 0);
   tl.to(anim, { scanX: W + 5, duration: DURATION * 0.9, ease: "none" }, 0);
 
   tl.to(anim, {
@@ -58,6 +79,14 @@ function buildTimeline() {
     repeat: 3,
     ease: "sine.inOut",
   }, 0);
+
+  tl.to(anim, {
+    intersectBurst: 1,
+    duration: 0.06,
+    yoyo: true,
+    repeat: 7,
+    ease: "steps(1)",
+  }, 0.2);
 
   tl.to(anim, {
     scanIntensity: 0.1,
@@ -77,6 +106,13 @@ function buildTimeline() {
       ease: "steps(1)",
     }, t);
     tl.to(anim, { glitchActive: 0, glitchX: 0, duration: 0.01 }, t + 0.28);
+    tl.to(anim, {
+      intersectBurst: 1,
+      duration: 0.05,
+      yoyo: true,
+      repeat: 5,
+      ease: "steps(1)",
+    }, t + 0.05);
   });
 
   return tl;
@@ -92,6 +128,7 @@ function renderFrame(tl, frameIndex) {
 
   const upscale = createCanvas(W * SCALE, H * SCALE);
   const uctx = upscale.getContext("2d");
+  uctx.clearRect(0, 0, W * SCALE, H * SCALE);
   uctx.imageSmoothingEnabled = false;
   uctx.drawImage(canvas, 0, 0, W * SCALE, H * SCALE);
 
@@ -104,19 +141,23 @@ async function main() {
   const tl = buildTimeline();
   const gif = GIFEncoder();
   let lastCanvas = null;
+  let transparentIndex = 0;
 
   for (let i = 0; i < FRAME_COUNT; i++) {
     const canvas = renderFrame(tl, i);
     lastCanvas = canvas;
     const { data, width, height } = canvas.getContext("2d").getImageData(0, 0, W * SCALE, H * SCALE);
-    const palette = quantize(data, 48);
-    const index = applyPalette(data, palette);
+    const palette = quantize(data, 32, QUANT_OPTS);
+    const index = applyPalette(data, palette, "rgba4444");
+    transparentIndex = findTransparentIndex(palette);
 
     gif.writeFrame(index, width, height, {
       palette,
       delay: FRAME_MS,
       repeat: i === 0 ? 0 : undefined,
       dispose: 2,
+      transparent: true,
+      transparentIndex,
     });
   }
 
@@ -129,7 +170,7 @@ async function main() {
   }
 
   const sizeKb = (bytes.length / 1024).toFixed(1);
-  console.log(`Wrote ${OUT_GIF} (${sizeKb} KB, ${W * SCALE}x${H * SCALE})`);
+  console.log(`Wrote ${OUT_GIF} (${sizeKb} KB, ${W * SCALE}x${H * SCALE}, transparent)`);
   console.log(`Wrote ${OUT_PNG} (static poster frame)`);
 }
 

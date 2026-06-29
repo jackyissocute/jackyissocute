@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/section-divider.gif?v=2" alt="" width="100%" />
+  <img src="assets/section-divider.gif?v=3" alt="" width="100%" />
 </p>
 
 ## About Me

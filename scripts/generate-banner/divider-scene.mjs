@@ -10,10 +10,23 @@ export const COLORS = {
   dimMagenta: "#661133",
 };
 
+// Cyan line — upper zigzag
 export const PRIMARY = [
   [0, 5], [30, 5], [36, 4], [70, 4], [76, 6], [120, 6],
-  [126, 5], [170, 5], [176, 6], [220, 6], [226, 5], [270, 5],
+  [126, 5], [170, 5], [176, 6], [220, 6], [226, 5], [270, 6],
   [276, 5], [320, 5], [350, 5],
+];
+
+// Magenta line — lower zigzag, crosses cyan at shared vertices
+export const SECONDARY = [
+  [0, 7], [50, 7], [76, 6], [100, 8], [140, 7], [176, 6],
+  [200, 8], [240, 7], [270, 6], [300, 7], [350, 7],
+];
+
+export const CROSSINGS = [
+  [76, 6],
+  [176, 6],
+  [270, 6],
 ];
 
 export const GLITCH_SEGMENT = [[155, 5], [170, 5]];
@@ -21,8 +34,6 @@ export const GLITCH_SEGMENT = [[155, 5], [170, 5]];
 export const BLOCKS = [
   { x: 29, y: 4, size: 2, color: COLORS.cyan, phase: 0 },
   { x: 318, y: 4, size: 2, color: COLORS.magenta, phase: 1.2 },
-  { x: 153, y: 4, size: 1, color: COLORS.yellow, phase: 0.5 },
-  { x: 172, y: 4, size: 1, color: COLORS.yellow, phase: 0.8 },
 ];
 
 function strokePolyline(ctx, points, { color, width, alpha = 1, dash = [], offsetX = 0, offsetY = 0 }) {
@@ -59,17 +70,22 @@ function drawScanBeam(ctx, scanX, intensity) {
   ctx.restore();
 }
 
-function drawDataPixels(ctx, offset, time) {
-  for (let i = 0; i < 8; i++) {
-    const x = ((i * 47 + offset * 2) % (W + 8)) - 4;
-    const y = 4 + (i % 2);
-    const flicker = Math.sin(time * 8 + i) > 0.45;
-    if (!flicker) continue;
-    ctx.fillStyle = i % 3 === 0 ? COLORS.magenta : COLORS.cyan;
-    ctx.globalAlpha = 0.28;
-    ctx.fillRect(x, y, 1, 1);
+function drawIntersections(ctx, state, gx) {
+  const phase = (Math.sin(state.time * 18) + 1) / 2;
+  const burst = state.intersectBurst;
+
+  for (const [x, y] of CROSSINGS) {
+    const px = x + gx;
+    if (burst > 0.5 || phase > 0.72) {
+      fillBlock(ctx, px - 1, y - 1, 2, COLORS.yellow, 0.85 + burst * 0.15);
+      fillBlock(ctx, px, y, 1, COLORS.cyan, 0.9);
+    } else if (phase > 0.38) {
+      fillBlock(ctx, px - 1, y - 1, 2, COLORS.magenta, 0.9);
+    } else {
+      fillBlock(ctx, px - 1, y - 1, 1, COLORS.cyan, 0.85);
+      fillBlock(ctx, px, y - 1, 1, COLORS.magenta, 0.85);
+    }
   }
-  ctx.globalAlpha = 1;
 }
 
 export function drawDividerFrame(ctx, state) {
@@ -79,11 +95,10 @@ export function drawDividerFrame(ctx, state) {
   const pulseAlpha = 0.7 + state.pulse * 0.25;
   const gx = state.glitchActive ? state.glitchX : 0;
 
-  drawDataPixels(ctx, state.dataOffset, state.time);
-
   if (state.glitchActive) {
     strokePolyline(ctx, PRIMARY, { color: COLORS.dimMagenta, width: 1, alpha: 0.45, offsetX: gx - 1 });
     strokePolyline(ctx, PRIMARY, { color: COLORS.dimCyan, width: 1, alpha: 0.45, offsetX: gx + 1 });
+    strokePolyline(ctx, SECONDARY, { color: COLORS.magenta, width: 1, alpha: 0.35, offsetX: gx + 1 });
   }
 
   strokePolyline(ctx, PRIMARY, {
@@ -93,12 +108,21 @@ export function drawDividerFrame(ctx, state) {
     offsetX: gx,
   });
 
+  strokePolyline(ctx, SECONDARY, {
+    color: COLORS.magenta,
+    width: 1,
+    alpha: 0.65 + state.pulse * 0.3,
+    offsetX: -gx * 0.5,
+  });
+
   strokePolyline(ctx, GLITCH_SEGMENT, {
     color: COLORS.yellow,
     width: 1,
     alpha: 0.5 + state.pulse * 0.25,
     dash: [3, 2],
   });
+
+  drawIntersections(ctx, state, gx);
 
   for (const block of BLOCKS) {
     const flicker = 0.45 + 0.55 * (0.5 + 0.5 * Math.sin(state.time * 6 + block.phase));
@@ -119,5 +143,6 @@ export function createDividerState() {
     scanX: -5,
     scanIntensity: 0,
     dataOffset: 0,
+    intersectBurst: 0,
   };
 }
