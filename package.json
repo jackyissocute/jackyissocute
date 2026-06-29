@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate:banner": "node scripts/generate-banner/render.mjs"
+    "generate:banner": "node scripts/generate-banner/render.mjs",
+    "generate:divider": "node scripts/generate-banner/generate-divider.mjs"
   },
   "devDependencies": {
     "@napi-rs/canvas": "^0.1.65",
