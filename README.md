@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/wave-divider.png" alt="Cyberpunk neon wave divider" width="92%" />
+  <img src="assets/wave-divider.png" alt="" width="100%" />
 </p>
 
 ## About Me

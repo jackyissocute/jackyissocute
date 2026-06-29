@@ -7,62 +7,54 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT = join(__dirname, "../../assets/wave-divider.png");
 
 const W = 1400;
-const H = 90;
+const H = 64;
 
-function strokePath(ctx, d, style) {
-  Object.assign(ctx, style);
-  const parts = d.trim().split(/\s+/);
+const PRIMARY = [
+  [0, 32], [120, 32], [145, 24], [280, 24], [305, 40], [480, 40],
+  [505, 26], [680, 26], [705, 42], [880, 42], [905, 28], [1080, 28],
+  [1105, 36], [1280, 36], [1400, 32],
+];
+
+const SECONDARY = [
+  [0, 46], [95, 46], [130, 36], [310, 36], [340, 52], [520, 52],
+  [550, 38], [730, 38], [760, 54], [940, 54], [970, 40], [1150, 40],
+  [1180, 48], [1400, 46],
+];
+
+function strokePolyline(ctx, points, { color, width, alpha = 1, dash = [] }) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width;
+  ctx.lineCap = "square";
+  ctx.lineJoin = "miter";
+  ctx.globalAlpha = alpha;
+  ctx.setLineDash(dash);
   ctx.beginPath();
-  let i = 0;
-  while (i < parts.length) {
-    const cmd = parts[i++];
-    if (cmd === "M" || cmd === "L") {
-      const x = Number(parts[i++]);
-      const y = Number(parts[i++]);
-      if (cmd === "M") ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
-    }
+  ctx.moveTo(points[0][0], points[0][1]);
+  for (let i = 1; i < points.length; i++) {
+    ctx.lineTo(points[i][0], points[i][1]);
   }
   ctx.stroke();
+  ctx.restore();
 }
 
-function fillRect(ctx, x, y, w, h, color) {
+function fillBlock(ctx, x, y, size, color) {
   ctx.fillStyle = color;
-  ctx.fillRect(x, y, w, h);
+  ctx.fillRect(x, y, size, size);
 }
 
 const canvas = createCanvas(W, H);
 const ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, W, H);
 
-strokePath(ctx, "M0 45 L120 45 L145 38 L280 38 L305 52 L480 52 L505 40 L680 40 L705 55 L880 55 L905 42 L1080 42 L1105 50 L1280 50 L1400 45", {
-  strokeStyle: "#00F0FF",
-  lineWidth: 2.5,
-  lineCap: "square",
-  lineJoin: "miter",
-  globalAlpha: 1,
-});
+strokePolyline(ctx, PRIMARY, { color: "#00F0FF", width: 4, alpha: 1 });
+strokePolyline(ctx, SECONDARY, { color: "#FF2A6D", width: 3, alpha: 0.75 });
+strokePolyline(ctx, [[620, 32], [680, 32]], { color: "#FCEE0A", width: 3, alpha: 0.7, dash: [8, 6] });
 
-strokePath(ctx, "M0 58 L95 58 L130 48 L310 48 L340 62 L520 62 L550 50 L730 50 L760 65 L940 65 L970 52 L1150 52 L1180 60 L1400 58", {
-  strokeStyle: "#FF2A6D",
-  lineWidth: 1.5,
-  lineCap: "square",
-  globalAlpha: 0.55,
-});
-
-ctx.setLineDash([6, 4]);
-strokePath(ctx, "M620 45 L680 45", {
-  strokeStyle: "#FCEE0A",
-  lineWidth: 2,
-  lineCap: "square",
-  globalAlpha: 0.45,
-});
-ctx.setLineDash([]);
-
-fillRect(ctx, 116, 41, 8, 8, "#00F0FF");
-fillRect(ctx, 1272, 46, 8, 8, "#FF2A6D");
-fillRect(ctx, 612, 41, 4, 4, "#FCEE0A");
-fillRect(ctx, 688, 41, 4, 4, "#FCEE0A");
+fillBlock(ctx, 116, 28, 10, "#00F0FF");
+fillBlock(ctx, 1272, 30, 10, "#FF2A6D");
+fillBlock(ctx, 612, 30, 6, "#FCEE0A");
+fillBlock(ctx, 688, 30, 6, "#FCEE0A");
 
 writeFileSync(OUT, canvas.toBuffer("image/png"));
-console.log(`Wrote ${OUT}`);
+console.log(`Wrote ${OUT} (${W}x${H})`);
