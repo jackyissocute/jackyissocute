@@ -27,21 +27,21 @@
   <img src="assets/neon-divider.gif" alt="" width="100%" />
 </p>
 
-<h2>
-  <img src="assets/pets/cat-about.gif" alt="" width="96" align="left" />
-  About Me
-</h2>
-<br clear="both" />
+## About Me
+
+<p align="left">
+  <img src="assets/pets/cat-about.gif" alt="Pixel cat sitting and blinking" width="88" />
+</p>
 
 I am Jacky Lin, an undergraduate student at Duke Kunshan University interested in the quiet places where physics, biology, and computation begin to overlap. My work centers on molecular simulation, research automation, and AI-assisted tools that make scientific workflows more reproducible and readable.
 
 I like building systems that help research move with more clarity: simulation folders that explain themselves, scripts that reduce manual friction, and document AI tools that turn dense PDFs into searchable knowledge. My long-term direction is toward medical physics, biomedical computation, and research software that feels precise enough for science and humane enough for daily use.
 
-<h2>
-  Research Compass
-  <img src="assets/pets/cat-compass.gif" alt="" width="96" align="right" />
-</h2>
-<br clear="both" />
+## Research Compass
+
+<p align="right">
+  <img src="assets/pets/cat-compass.gif" alt="Pixel cat walking and looking around" width="88" />
+</p>
 
 | Direction | What I am exploring |
 | --- | --- |
@@ -51,11 +51,11 @@ I like building systems that help research move with more clarity: simulation fo
 | Biomedical AI | OCR, PDF extraction, local chatbot tools, and scientific document intelligence |
 | Medical physics | Computational foundations for future graduate study and applied biomedical modeling |
 
-<h2>
-  <img src="assets/pets/cat-toolkit.gif" alt="" width="96" align="left" />
-  Toolkit
-</h2>
-<br clear="both" />
+## Toolkit
+
+<p align="left">
+  <img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" />
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -70,11 +70,11 @@ I like building systems that help research move with more clarity: simulation fo
   <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
 </p>
 
-<h2>
-  Featured Work
-  <img src="assets/pets/cat-featured.gif" alt="" width="96" align="right" />
-</h2>
-<br clear="both" />
+## Featured Work
+
+<p align="right">
+  <img src="assets/pets/cat-featured.gif" alt="Pixel cat walking" width="88" />
+</p>
 
 | Project | What it means |
 | --- | --- |
@@ -83,22 +83,22 @@ I like building systems that help research move with more clarity: simulation fo
 | [LiSPER-Dashboard](https://github.com/jackyissocute/LiSPER-Dashboard) | A dashboard-style interface for making LiSPER outputs easier to inspect and communicate. |
 | [Supplier Document Intelligence](https://github.com/jackyissocute/supplier-doc-intelligence) | OCR, PDF extraction, and AI-assisted document processing inspired by an externship-style Pfizer project. |
 
-<h2>
-  <img src="assets/pets/cat-focus.gif" alt="" width="96" align="left" />
-  Current Focus
-</h2>
-<br clear="both" />
+## Current Focus
+
+<p align="left">
+  <img src="assets/pets/cat-focus.gif" alt="Pixel cat running playfully" width="88" />
+</p>
 
 - Improving computational research workflows so simulation projects are easier to reproduce, review, and extend.
 - Building Python and R analysis habits around molecular data, document data, and research notes.
 - Studying molecular dynamics, molecular docking, and biomedical computation with a future medical physics path in mind.
 - Using AI agents carefully: not as shortcuts for understanding, but as tools for documentation, coding support, and scientific organization.
 
-<h2>
-  GitHub Snapshot
-  <img src="assets/pets/cat-snapshot.gif" alt="" width="96" align="right" />
-</h2>
-<br clear="both" />
+## GitHub Snapshot
+
+<p align="right">
+  <img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" />
+</p>
 
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=jackyissocute&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="Jacky's GitHub stats" />
@@ -125,4 +125,8 @@ I like building systems that help research move with more clarity: simulation fo
 <p align="center">
   <em>"What I cannot create, I do not understand."</em><br />
   — Richard Feynman
+</p>
+
+<p align="center">
+  <sub>Pixel cat sprites by <a href="https://opengameart.org/content/gray-cat-asset-pack">Krystsina Staselovich</a> (CC-BY)</sub>
 </p>
