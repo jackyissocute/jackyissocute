@@ -6,7 +6,8 @@ This folder contains the local visual assets used by the GitHub profile README.
 
 - `banner.gif` - Primary animated cyberpunk pixel banner (1400×428). Generated locally with GSAP + Node canvas. Displays neon skyline, rain, scanlines, and **JACKY LIN // NIGHT CITY // DEV MODE** text with glitch effects.
 - `banner-classic.svg` - Original static SVG artwork (soft cinematic research theme). Kept as a fallback reference.
-- `section-divider.png` - Cyberpunk neon section divider (PNG for reliable GitHub rendering).
+- `section-divider.gif` - Animated cyberpunk neon section divider (glitch, scanline, pixel drift). Generated with GSAP + Node canvas.
+- `section-divider.png` - Static poster frame from the divider animation.
 - `wave-divider.svg` - Source SVG for the divider.
 - `wave-divider.png` - Deprecated; kept for reference.
 

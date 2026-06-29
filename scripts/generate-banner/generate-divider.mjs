@@ -2,59 +2,138 @@ import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createCanvas } from "@napi-rs/canvas";
+import gifenc from "gifenc";
+import gsap from "gsap";
+import {
+  W,
+  H,
+  SCALE,
+  createDividerState,
+  drawDividerFrame,
+} from "./divider-scene.mjs";
+
+const { GIFEncoder, quantize, applyPalette } = gifenc;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUT = join(__dirname, "../../assets/section-divider.png");
+const OUT_GIF = join(__dirname, "../../assets/section-divider.gif");
+const OUT_PNG = join(__dirname, "../../assets/section-divider.png");
 
-const W = 1400;
-const H = 80;
+const FPS = 12;
+const DURATION = 2.8;
+const FRAME_COUNT = Math.round(FPS * DURATION);
+const FRAME_MS = Math.round(1000 / FPS);
 
-const PRIMARY = [
-  [0, 36], [120, 36], [145, 28], [280, 28], [305, 44], [480, 44],
-  [505, 30], [680, 30], [705, 46], [880, 46], [905, 32], [1080, 32],
-  [1105, 40], [1280, 40], [1400, 36],
-];
+const state = createDividerState();
+const anim = {
+  time: 0,
+  glitchX: 0,
+  glitchActive: 0,
+  pulse: 0,
+  scanX: -5,
+  scanIntensity: 0.12,
+  dataOffset: 0,
+};
 
-const SECONDARY = [
-  [0, 52], [95, 52], [130, 42], [310, 42], [340, 58], [520, 58],
-  [550, 44], [730, 44], [760, 60], [940, 60], [970, 46], [1150, 46],
-  [1180, 54], [1400, 52],
-];
+function sync() {
+  state.time = anim.time;
+  state.glitchX = anim.glitchX;
+  state.glitchActive = anim.glitchActive > 0.5;
+  state.pulse = anim.pulse;
+  state.scanX = anim.scanX;
+  state.scanIntensity = anim.scanIntensity;
+  state.dataOffset = anim.dataOffset;
+}
 
-function strokePolyline(ctx, points, { color, width, alpha = 1, dash = [] }) {
-  ctx.save();
-  ctx.strokeStyle = color;
-  ctx.lineWidth = width;
-  ctx.lineCap = "square";
-  ctx.lineJoin = "miter";
-  ctx.globalAlpha = alpha;
-  ctx.setLineDash(dash);
-  ctx.beginPath();
-  ctx.moveTo(points[0][0], points[0][1]);
-  for (let i = 1; i < points.length; i++) {
-    ctx.lineTo(points[i][0], points[i][1]);
+function buildTimeline() {
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0, paused: true });
+
+  tl.to(anim, { time: DURATION, duration: DURATION, ease: "none" }, 0);
+  tl.to(anim, { dataOffset: 40, duration: DURATION, ease: "none" }, 0);
+  tl.to(anim, { scanX: W + 5, duration: DURATION * 0.9, ease: "none" }, 0);
+
+  tl.to(anim, {
+    pulse: 1,
+    duration: 0.6,
+    yoyo: true,
+    repeat: 3,
+    ease: "sine.inOut",
+  }, 0);
+
+  tl.to(anim, {
+    scanIntensity: 0.28,
+    duration: 0.25,
+    yoyo: true,
+    repeat: 5,
+    ease: "sine.inOut",
+  }, 0.1);
+
+  [0.5, 1.3, 2.0, 2.5].forEach((t) => {
+    tl.to(anim, {
+      glitchActive: 1,
+      glitchX: 2,
+      duration: 0.04,
+      yoyo: true,
+      repeat: 4,
+      ease: "steps(1)",
+    }, t);
+    tl.to(anim, { glitchActive: 0, glitchX: 0, duration: 0.01 }, t + 0.28);
+  });
+
+  return tl;
+}
+
+function renderFrame(tl, frameIndex) {
+  tl.progress(frameIndex / FRAME_COUNT);
+  sync();
+
+  const canvas = createCanvas(W, H);
+  const ctx = canvas.getContext("2d");
+  drawDividerFrame(ctx, state);
+
+  const upscale = createCanvas(W * SCALE, H * SCALE);
+  const uctx = upscale.getContext("2d");
+  uctx.imageSmoothingEnabled = false;
+  uctx.drawImage(canvas, 0, 0, W * SCALE, H * SCALE);
+
+  return upscale;
+}
+
+async function main() {
+  console.log(`Rendering ${FRAME_COUNT} divider frames at ${FPS} fps...`);
+
+  const tl = buildTimeline();
+  const gif = GIFEncoder();
+  let lastCanvas = null;
+
+  for (let i = 0; i < FRAME_COUNT; i++) {
+    const canvas = renderFrame(tl, i);
+    lastCanvas = canvas;
+    const { data, width, height } = canvas.getContext("2d").getImageData(0, 0, W * SCALE, H * SCALE);
+    const palette = quantize(data, 48);
+    const index = applyPalette(data, palette);
+
+    gif.writeFrame(index, width, height, {
+      palette,
+      delay: FRAME_MS,
+      repeat: i === 0 ? 0 : undefined,
+      dispose: 2,
+    });
   }
-  ctx.stroke();
-  ctx.restore();
+
+  gif.finish();
+  const bytes = gif.bytes();
+  writeFileSync(OUT_GIF, Buffer.from(bytes));
+
+  if (lastCanvas) {
+    writeFileSync(OUT_PNG, lastCanvas.toBuffer("image/png"));
+  }
+
+  const sizeKb = (bytes.length / 1024).toFixed(1);
+  console.log(`Wrote ${OUT_GIF} (${sizeKb} KB, ${W * SCALE}x${H * SCALE})`);
+  console.log(`Wrote ${OUT_PNG} (static poster frame)`);
 }
 
-function fillBlock(ctx, x, y, size, color) {
-  ctx.fillStyle = color;
-  ctx.fillRect(x, y, size, size);
-}
-
-const canvas = createCanvas(W, H);
-const ctx = canvas.getContext("2d");
-ctx.clearRect(0, 0, W, H);
-
-strokePolyline(ctx, PRIMARY, { color: "#00F0FF", width: 4, alpha: 1 });
-strokePolyline(ctx, SECONDARY, { color: "#FF2A6D", width: 3, alpha: 0.75 });
-strokePolyline(ctx, [[620, 36], [680, 36]], { color: "#FCEE0A", width: 3, alpha: 0.7, dash: [8, 6] });
-
-fillBlock(ctx, 116, 32, 10, "#00F0FF");
-fillBlock(ctx, 1272, 34, 10, "#FF2A6D");
-fillBlock(ctx, 612, 34, 6, "#FCEE0A");
-fillBlock(ctx, 688, 34, 6, "#FCEE0A");
-
-writeFileSync(OUT, canvas.toBuffer("image/png"));
-console.log(`Wrote ${OUT} (${W}x${H})`);
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
