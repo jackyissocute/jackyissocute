@@ -54,7 +54,7 @@ I like building systems that help research move with more clarity: simulation fo
 | Biomedical AI | OCR, PDF extraction, local chatbot tools, and scientific document intelligence |
 | Medical physics | Computational foundations for future graduate study and applied biomedical modeling |
 
-<img src="assets/pets/cat-compass.gif" alt="Pixel cat walking across the section" width="100%" />
+<img src="assets/pets/cat-compass.gif?v=2" alt="Pixel cat walking across the section" width="100%" />
 
 ## Toolkit
 
@@ -75,7 +75,7 @@ I like building systems that help research move with more clarity: simulation fo
 
 </td>
 <td width="96" valign="middle" align="right">
-<img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" />
+<img src="assets/pets/cat-toolkit.gif?v=2" alt="Pixel cat swatting toward the toolkit badges" width="88" />
 </td>
 </tr>
 </table>

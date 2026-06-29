@@ -13,7 +13,7 @@ const OUT_DIR = join(__dirname, "../../assets/pets");
 export const TRAVERSE_WIDTH = 640;
 export const TRAVERSE_HEIGHT = 72;
 export const TRAVERSE_SCALE = 2;
-export const TRAVERSE_CAT_SCALE = 3;
+export const TRAVERSE_CAT_SCALE = 1;
 export const TRAVERSE_CAT_PX = FRAME_SIZE * TRAVERSE_CAT_SCALE;
 
 const QUANT_OPTS = {
