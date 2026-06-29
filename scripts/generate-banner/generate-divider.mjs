@@ -15,8 +15,8 @@ import {
 const { GIFEncoder, quantize, applyPalette } = gifenc;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUT_GIF = join(__dirname, "../../assets/section-divider.gif");
-const OUT_PNG = join(__dirname, "../../assets/section-divider.png");
+const OUT_GIF = join(__dirname, "../../assets/neon-divider.gif");
+const OUT_PNG = join(__dirname, "../../assets/neon-divider.png");
 
 const QUANT_OPTS = {
   format: "rgba4444",
