@@ -29,11 +29,20 @@
 
 ## About Me
 
-<img src="assets/pets/cat-about.gif" alt="Pixel cat sitting and blinking" width="88" align="left" />
+<table>
+<tr>
+<td width="128" valign="middle" align="center">
+<img src="assets/pets/cat-about.gif" alt="Pixel cat sitting and blinking" width="120" />
+</td>
+<td valign="middle">
 
 I am Jacky Lin, an undergraduate student at Duke Kunshan University interested in the quiet places where physics, biology, and computation begin to overlap. My work centers on molecular simulation, research automation, and AI-assisted tools that make scientific workflows more reproducible and readable.
 
 I like building systems that help research move with more clarity: simulation folders that explain themselves, scripts that reduce manual friction, and document AI tools that turn dense PDFs into searchable knowledge. My long-term direction is toward medical physics, biomedical computation, and research software that feels precise enough for science and humane enough for daily use.
+
+</td>
+</tr>
+</table>
 
 ## Research Compass
 
@@ -45,9 +54,7 @@ I like building systems that help research move with more clarity: simulation fo
 | Biomedical AI | OCR, PDF extraction, local chatbot tools, and scientific document intelligence |
 | Medical physics | Computational foundations for future graduate study and applied biomedical modeling |
 
-<p align="right">
-  <img src="assets/pets/cat-compass.gif" alt="Pixel cat walking back and forth" width="88" />
-</p>
+<img src="assets/pets/cat-compass.gif" alt="Pixel cat walking across the section" width="100%" />
 
 ## Toolkit
 
@@ -83,12 +90,21 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Current Focus
 
-<img src="assets/pets/cat-focus.gif" alt="Pixel cat running playfully" width="88" align="left" />
+<table>
+<tr>
+<td width="128" valign="middle" align="center">
+<img src="assets/pets/cat-focus.gif" alt="Pixel cat running playfully" width="120" />
+</td>
+<td valign="middle">
 
 - Improving computational research workflows so simulation projects are easier to reproduce, review, and extend.
 - Building Python and R analysis habits around molecular data, document data, and research notes.
 - Studying molecular dynamics, molecular docking, and biomedical computation with a future medical physics path in mind.
 - Using AI agents carefully: not as shortcuts for understanding, but as tools for documentation, coding support, and scientific organization.
+
+</td>
+</tr>
+</table>
 
 ## GitHub Snapshot
 

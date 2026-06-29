@@ -26,7 +26,7 @@ This writes `assets/banner.gif`. GSAP runs at build time only — GitHub serves 
 
 ## Section Pixel Cats
 
-The profile README embeds one animated gray tabby cat per section. Prose sections (About Me, Current Focus) use float wrap; table and badge sections place the cat below the content, aligned right. Walk and run pets use a ping-pong loop (right, turn, left, turn).
+The profile README embeds one animated gray tabby cat per section. Prose sections (About Me, Current Focus) use a two-column table: cat left (120px), text right with aligned left edge. Research Compass uses a full-width transparent traverse GIF (`width="100%"`) where the cat walks across the section. Other table/badge sections place small cats below content, aligned right.
 
 | File | Section | Source animation |
 | --- | --- | --- |

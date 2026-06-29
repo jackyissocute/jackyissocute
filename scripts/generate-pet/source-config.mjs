@@ -23,8 +23,7 @@ export const SECTION_PETS = [
     source: "walk.png",
     frameCount: 7,
     fps: 10,
-    animation: "pingpong",
-    turnPause: 2,
+    animation: "traverse",
   },
   {
     id: "toolkit",

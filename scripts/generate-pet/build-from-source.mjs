@@ -144,10 +144,10 @@ async function buildPetGif(pet) {
   return { bytes: gif.bytes(), frameTotal: sequence.length };
 }
 
-export async function buildAllPets() {
+export async function buildAllPets(pets = SECTION_PETS) {
   const results = [];
 
-  for (const pet of SECTION_PETS) {
+  for (const pet of pets) {
     const { bytes, frameTotal } = await buildPetGif(pet);
     const outPath = join(OUT_DIR, pet.file);
     writeFileSync(outPath, Buffer.from(bytes));
