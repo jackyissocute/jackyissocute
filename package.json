@@ -1,0 +1,13 @@
+{
+  "name": "jackyissocute-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:banner": "node scripts/generate-banner/render.mjs"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "^0.1.65",
+    "gifenc": "^1.0.3",
+    "gsap": "^3.12.7"
+  }
+}

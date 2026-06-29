@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Biophysics, molecular simulation, and AI research tools banner" width="100%" />
+  <img src="assets/banner.gif" alt="Cyberpunk pixel banner — Jacky Lin, Night City, Dev Mode" width="100%" />
 </p>
 
 <h1 align="center">Jacky Lin</h1>
@@ -11,20 +11,20 @@
 
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3200&pause=900&color=A5B4FC&center=true&vCenter=true&width=760&lines=Building+reproducible+simulation+workflows;Exploring+protein-ion+selectivity+and+DNA+topology;Designing+AI+tools+for+scientific+documents;Learning+toward+medical+physics+and+biomedical+computation" alt="Animated typing text describing Jacky's research interests" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3200&pause=900&color=00F0FF&center=true&vCenter=true&width=760&lines=Compiling+simulation+pipelines;Exploring+molecular+data+nodes;Building+AI+tools+for+research;Leveling+up+toward+medical+physics" alt="Animated typing text describing Jacky's research interests" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/jackyissocute">
-    <img src="https://img.shields.io/badge/GitHub-jackyissocute-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile badge" />
+    <img src="https://img.shields.io/badge/GitHub-jackyissocute-0D0221?style=for-the-badge&logo=github&logoColor=00F0FF" alt="GitHub profile badge" />
   </a>
-  <img src="https://img.shields.io/badge/Duke%20Kunshan%20University-Research-1E3A8A?style=for-the-badge" alt="Duke Kunshan University research badge" />
-  <img src="https://img.shields.io/badge/Focus-Biophysics%20%7C%20AI%20Tools-7C3AED?style=for-the-badge" alt="Biophysics and AI tools focus badge" />
+  <img src="https://img.shields.io/badge/Duke%20Kunshan%20University-Research-7B2CBF?style=for-the-badge" alt="Duke Kunshan University research badge" />
+  <img src="https://img.shields.io/badge/Focus-Biophysics%20%7C%20AI%20Tools-FF2A6D?style=for-the-badge" alt="Biophysics and AI tools focus badge" />
 </p>
 
 <p align="center">
-  <img src="assets/wave-divider.svg" alt="Soft wave divider" width="92%" />
+  <img src="assets/wave-divider.svg" alt="Cyberpunk neon wave divider" width="92%" />
 </p>
 
 ## About Me

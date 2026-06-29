@@ -1,9 +1,19 @@
 <svg width="1400" height="90" viewBox="0 0 1400 90" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Soft research wave divider</title>
-  <desc id="desc">A thin wave divider with violet, blue, and warm gold accents.</desc>
-  <path d="M0 47C117 10 242 8 374 40C511 74 612 89 742 50C878 9 1004 7 1130 41C1235 70 1311 75 1400 43" stroke="#A5B4FC" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M0 57C132 31 241 36 350 58C475 83 603 83 719 55C852 24 972 23 1115 56C1232 83 1310 78 1400 58" stroke="#7DD3FC" stroke-opacity="0.65" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M113 45H234M1055 45H1180" stroke="#FDE68A" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="240" cy="45" r="4" fill="#FDE68A"/>
-  <circle cx="1050" cy="45" r="4" fill="#FDE68A"/>
+  <title id="title">Cyberpunk neon wave divider</title>
+  <desc id="desc">Angular neon divider with cyan, magenta, and yellow pixel accents.</desc>
+
+  <!-- Primary angular neon line -->
+  <path d="M0 45 L120 45 L145 38 L280 38 L305 52 L480 52 L505 40 L680 40 L705 55 L880 55 L905 42 L1080 42 L1105 50 L1280 50 L1400 45" stroke="#00F0FF" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+
+  <!-- Secondary magenta trace -->
+  <path d="M0 58 L95 58 L130 48 L310 48 L340 62 L520 62 L550 50 L730 50 L760 65 L940 65 L970 52 L1150 52 L1180 60 L1400 58" stroke="#FF2A6D" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="square"/>
+
+  <!-- Glitch dash -->
+  <path d="M620 45 L680 45" stroke="#FCEE0A" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="square"/>
+
+  <!-- Pixel endpoint blocks -->
+  <rect x="116" y="41" width="8" height="8" fill="#00F0FF"/>
+  <rect x="1272" y="46" width="8" height="8" fill="#FF2A6D"/>
+  <rect x="612" y="41" width="4" height="4" fill="#FCEE0A"/>
+  <rect x="688" y="41" width="4" height="4" fill="#FCEE0A"/>
 </svg>

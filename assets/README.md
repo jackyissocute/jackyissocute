@@ -4,8 +4,20 @@ This folder contains the local visual assets used by the GitHub profile README.
 
 ## Files
 
-- `banner.svg` - Original SVG artwork created for this profile. It combines abstract molecular traces, a notebook-like research panel, and a soft cinematic color palette. No copyrighted anime images or screenshots are used.
-- `wave-divider.svg` - Original SVG divider used to separate sections without adding clutter.
+- `banner.gif` - Primary animated cyberpunk pixel banner (1400×428). Generated locally with GSAP + Node canvas. Displays neon skyline, rain, scanlines, and **JACKY LIN // NIGHT CITY // DEV MODE** text with glitch effects.
+- `banner-classic.svg` - Original static SVG artwork (soft cinematic research theme). Kept as a fallback reference.
+- `wave-divider.svg` - Cyberpunk neon divider with angular cyan/magenta lines and pixel accents.
+
+## Regenerating the Banner
+
+The animated banner is built from source in `scripts/generate-banner/`:
+
+```bash
+npm install
+npm run generate:banner
+```
+
+This writes `assets/banner.gif`. GSAP runs at build time only — GitHub serves the static GIF in the README.
 
 ## External Dynamic Services
 
@@ -15,4 +27,4 @@ The main `README.md` also uses a small number of common README services:
 - Readme Typing SVG by DenverCoder1: <https://github.com/DenverCoder1/readme-typing-svg>
 - GitHub Readme Stats by anuraghazra: <https://github.com/anuraghazra/github-readme-stats>
 
-Dynamic services are used only for badges/widgets. Core visual assets are kept locally in this repository for stability.
+Dynamic services are used for badges and typing widgets. The banner GIF is self-hosted in this repository.
