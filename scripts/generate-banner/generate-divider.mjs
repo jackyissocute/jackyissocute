@@ -30,7 +30,7 @@ const anim = {
   glitchActive: 0,
   pulse: 0,
   scanX: -5,
-  scanIntensity: 0.12,
+  scanIntensity: 0.05,
   dataOffset: 0,
 };
 
@@ -60,10 +60,10 @@ function buildTimeline() {
   }, 0);
 
   tl.to(anim, {
-    scanIntensity: 0.28,
+    scanIntensity: 0.1,
     duration: 0.25,
     yoyo: true,
-    repeat: 5,
+    repeat: 3,
     ease: "sine.inOut",
   }, 0.1);
 

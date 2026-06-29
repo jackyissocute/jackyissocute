@@ -1,5 +1,5 @@
 export const W = 350;
-export const H = 20;
+export const H = 10;
 export const SCALE = 4;
 
 export const COLORS = {
@@ -11,24 +11,18 @@ export const COLORS = {
 };
 
 export const PRIMARY = [
-  [0, 9], [30, 9], [36, 7], [70, 7], [76, 11], [120, 11],
-  [126, 8], [170, 8], [176, 12], [220, 12], [226, 8], [270, 8],
-  [276, 10], [320, 10], [350, 9],
+  [0, 5], [30, 5], [36, 4], [70, 4], [76, 6], [120, 6],
+  [126, 5], [170, 5], [176, 6], [220, 6], [226, 5], [270, 5],
+  [276, 5], [320, 5], [350, 5],
 ];
 
-export const SECONDARY = [
-  [0, 13], [24, 13], [33, 11], [78, 11], [85, 15], [130, 15],
-  [138, 11], [183, 11], [190, 15], [235, 15], [243, 12], [288, 12],
-  [295, 14], [350, 13],
-];
-
-export const GLITCH_SEGMENT = [[155, 9], [170, 9]];
+export const GLITCH_SEGMENT = [[155, 5], [170, 5]];
 
 export const BLOCKS = [
-  { x: 29, y: 8, size: 3, color: COLORS.cyan, phase: 0 },
-  { x: 318, y: 9, size: 3, color: COLORS.magenta, phase: 1.2 },
-  { x: 153, y: 8, size: 2, color: COLORS.yellow, phase: 0.5 },
-  { x: 172, y: 8, size: 2, color: COLORS.yellow, phase: 0.8 },
+  { x: 29, y: 4, size: 2, color: COLORS.cyan, phase: 0 },
+  { x: 318, y: 4, size: 2, color: COLORS.magenta, phase: 1.2 },
+  { x: 153, y: 4, size: 1, color: COLORS.yellow, phase: 0.5 },
+  { x: 172, y: 4, size: 1, color: COLORS.yellow, phase: 0.8 },
 ];
 
 function strokePolyline(ctx, points, { color, width, alpha = 1, dash = [], offsetX = 0, offsetY = 0 }) {
@@ -56,26 +50,23 @@ function fillBlock(ctx, x, y, size, color, alpha = 1) {
   ctx.restore();
 }
 
-function drawScanline(ctx, scanX, intensity) {
+function drawScanBeam(ctx, scanX, intensity) {
+  if (intensity <= 0) return;
   ctx.save();
   ctx.fillStyle = COLORS.cyan;
   ctx.globalAlpha = intensity;
-  ctx.fillRect(scanX, 0, 2, H);
-  ctx.globalAlpha = intensity * 0.25;
-  for (let y = 0; y < H; y += 2) {
-    ctx.fillRect(0, y, W, 1);
-  }
+  ctx.fillRect(scanX, 0, 1, H);
   ctx.restore();
 }
 
 function drawDataPixels(ctx, offset, time) {
-  for (let i = 0; i < 18; i++) {
-    const x = ((i * 23 + offset * 2) % (W + 8)) - 4;
-    const y = 2 + (i % 5) * 3;
-    const flicker = Math.sin(time * 8 + i) > 0.3;
+  for (let i = 0; i < 8; i++) {
+    const x = ((i * 47 + offset * 2) % (W + 8)) - 4;
+    const y = 4 + (i % 2);
+    const flicker = Math.sin(time * 8 + i) > 0.45;
     if (!flicker) continue;
     ctx.fillStyle = i % 3 === 0 ? COLORS.magenta : COLORS.cyan;
-    ctx.globalAlpha = 0.45;
+    ctx.globalAlpha = 0.28;
     ctx.fillRect(x, y, 1, 1);
   }
   ctx.globalAlpha = 1;
@@ -85,15 +76,14 @@ export function drawDividerFrame(ctx, state) {
   ctx.clearRect(0, 0, W, H);
   ctx.imageSmoothingEnabled = false;
 
-  const pulseAlpha = 0.65 + state.pulse * 0.35;
+  const pulseAlpha = 0.7 + state.pulse * 0.25;
   const gx = state.glitchActive ? state.glitchX : 0;
 
   drawDataPixels(ctx, state.dataOffset, state.time);
 
   if (state.glitchActive) {
-    strokePolyline(ctx, PRIMARY, { color: COLORS.dimMagenta, width: 1, alpha: 0.6, offsetX: gx - 1 });
-    strokePolyline(ctx, PRIMARY, { color: COLORS.dimCyan, width: 1, alpha: 0.6, offsetX: gx + 1 });
-    strokePolyline(ctx, SECONDARY, { color: COLORS.magenta, width: 1, alpha: 0.35, offsetX: gx + 1 });
+    strokePolyline(ctx, PRIMARY, { color: COLORS.dimMagenta, width: 1, alpha: 0.45, offsetX: gx - 1 });
+    strokePolyline(ctx, PRIMARY, { color: COLORS.dimCyan, width: 1, alpha: 0.45, offsetX: gx + 1 });
   }
 
   strokePolyline(ctx, PRIMARY, {
@@ -103,27 +93,20 @@ export function drawDividerFrame(ctx, state) {
     offsetX: gx,
   });
 
-  strokePolyline(ctx, SECONDARY, {
-    color: COLORS.magenta,
-    width: 1,
-    alpha: 0.55 + state.pulse * 0.25,
-    offsetX: -gx * 0.5,
-  });
-
   strokePolyline(ctx, GLITCH_SEGMENT, {
     color: COLORS.yellow,
     width: 1,
-    alpha: 0.55 + state.pulse * 0.35,
+    alpha: 0.5 + state.pulse * 0.25,
     dash: [3, 2],
   });
 
   for (const block of BLOCKS) {
-    const flicker = 0.4 + 0.6 * (0.5 + 0.5 * Math.sin(state.time * 6 + block.phase));
+    const flicker = 0.45 + 0.55 * (0.5 + 0.5 * Math.sin(state.time * 6 + block.phase));
     fillBlock(ctx, block.x + gx, block.y, block.size, block.color, flicker);
   }
 
   if (state.scanX >= 0) {
-    drawScanline(ctx, state.scanX, state.scanIntensity);
+    drawScanBeam(ctx, state.scanX, state.scanIntensity);
   }
 }
 
@@ -134,7 +117,7 @@ export function createDividerState() {
     glitchActive: false,
     pulse: 0,
     scanX: -5,
-    scanIntensity: 0.12,
+    scanIntensity: 0,
     dataOffset: 0,
   };
 }
