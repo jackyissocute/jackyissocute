@@ -85,13 +85,16 @@ I like building systems that help research move with more clarity: simulation fo
 
 <p align="center">
   <a href="https://github.com/jackyissocute">
-    <img src="https://img.shields.io/badge/GitHub-jackyissocute-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub link" />
+    <img src="https://img.shields.io/badge/GitHub-jackyissocute-0D0221?style=for-the-badge&logo=github&logoColor=00F0FF" alt="GitHub link" />
   </a>
-  <a href="mailto:your.email@example.com">
-    <img src="https://img.shields.io/badge/Email-add%20your%20address-475569?style=for-the-badge&logo=gmail&logoColor=white" alt="Email placeholder" />
+  <a href="mailto:jackieeelin929@gmail.com">
+    <img src="https://img.shields.io/badge/Email-jackieeelin929%40gmail.com-475569?style=for-the-badge&logo=gmail&logoColor=white" alt="Email link" />
   </a>
-  <a href="https://www.linkedin.com/in/your-linkedin/">
-    <img src="https://img.shields.io/badge/LinkedIn-add%20your%20profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn placeholder" />
+  <a href="https://jackyissocute.github.io/WhoIsJacky">
+    <img src="https://img.shields.io/badge/Portfolio-WhoIsJacky-7B2CBF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio link" />
+  </a>
+  <a href="https://www.linkedin.com/in/jackylinhelpsualot">
+    <img src="https://img.shields.io/badge/LinkedIn-jackylinhelpsualot-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn link" />
   </a>
 </p>
 
