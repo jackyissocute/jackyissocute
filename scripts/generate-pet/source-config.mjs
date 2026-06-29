@@ -34,15 +34,6 @@ export const SECTION_PETS = [
     animation: "loop",
   },
   {
-    id: "featured",
-    file: "cat-featured.gif",
-    source: "walk.png",
-    frameCount: 7,
-    fps: 12,
-    animation: "pingpong",
-    turnPause: 2,
-  },
-  {
     id: "focus",
     file: "cat-focus.gif",
     source: "run.png",

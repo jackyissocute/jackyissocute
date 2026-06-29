@@ -58,22 +58,27 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Toolkit
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
-  <img src="https://img.shields.io/badge/GROMACS-1F6FEB?style=flat-square" alt="GROMACS" />
-  <img src="https://img.shields.io/badge/CHARMM--GUI-6D28D9?style=flat-square" alt="CHARMM-GUI" />
-  <img src="https://img.shields.io/badge/Molecular%20Docking-0F766E?style=flat-square" alt="Molecular docking" />
-  <img src="https://img.shields.io/badge/Data%20Analysis-0EA5E9?style=flat-square" alt="Data analysis" />
-  <img src="https://img.shields.io/badge/OCR%20%2F%20Document%20AI-8B5CF6?style=flat-square" alt="OCR and document AI" />
-  <img src="https://img.shields.io/badge/Linux%20%2F%20Terminal-111827?style=flat-square&logo=gnubash&logoColor=white" alt="Linux and terminal" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
-</p>
+<table>
+<tr>
+<td valign="middle">
 
-<p align="right">
-  <img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" />
-</p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
+<img src="https://img.shields.io/badge/GROMACS-1F6FEB?style=flat-square" alt="GROMACS" />
+<img src="https://img.shields.io/badge/CHARMM--GUI-6D28D9?style=flat-square" alt="CHARMM-GUI" />
+<img src="https://img.shields.io/badge/Molecular%20Docking-0F766E?style=flat-square" alt="Molecular docking" />
+<img src="https://img.shields.io/badge/Data%20Analysis-0EA5E9?style=flat-square" alt="Data analysis" />
+<img src="https://img.shields.io/badge/OCR%20%2F%20Document%20AI-8B5CF6?style=flat-square" alt="OCR and document AI" />
+<img src="https://img.shields.io/badge/Linux%20%2F%20Terminal-111827?style=flat-square&logo=gnubash&logoColor=white" alt="Linux and terminal" />
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+<img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
+
+</td>
+<td width="96" valign="middle" align="right">
+<img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" />
+</td>
+</tr>
+</table>
 
 ## Featured Work
 
@@ -83,10 +88,6 @@ I like building systems that help research move with more clarity: simulation fo
 | [LiSPER-BEADS](https://github.com/jackyissocute/LiSPER-BEADS) | Supporting work connected to LiSPER, with attention to molecular systems, project structure, and research artifacts. |
 | [LiSPER-Dashboard](https://github.com/jackyissocute/LiSPER-Dashboard) | A dashboard-style interface for making LiSPER outputs easier to inspect and communicate. |
 | [Supplier Document Intelligence](https://github.com/jackyissocute/supplier-doc-intelligence) | OCR, PDF extraction, and AI-assisted document processing inspired by an externship-style Pfizer project. |
-
-<p align="right">
-  <img src="assets/pets/cat-featured.gif" alt="Pixel cat walking back and forth" width="88" />
-</p>
 
 ## Current Focus
 
@@ -113,10 +114,6 @@ I like building systems that help research move with more clarity: simulation fo
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jackyissocute&layout=compact&theme=tokyonight&hide_border=true" alt="Jacky's most used GitHub languages" />
 </p>
 
-<p align="right">
-  <img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" />
-</p>
-
 ## Connect
 
 <p align="center">
@@ -134,11 +131,17 @@ I like building systems that help research move with more clarity: simulation fo
   </a>
 </p>
 
-<p align="center">
-  <em>"What I cannot create, I do not understand."</em><br />
-  — Richard Feynman
-</p>
+<table align="right">
+<tr>
+<td valign="bottom" align="right">
 
-<p align="center">
-  <sub>Pixel cat sprites by <a href="https://opengameart.org/content/gray-cat-asset-pack">Krystsina Staselovich</a> (CC-BY)</sub>
-</p>
+<em>"What I cannot create, I do not understand."</em><br />
+— Richard Feynman<br />
+<sub>Pixel cat sprites by <a href="https://opengameart.org/content/gray-cat-asset-pack">Krystsina Staselovich</a> (CC-BY)</sub>
+
+</td>
+<td valign="bottom">
+<img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" />
+</td>
+</tr>
+</table>
