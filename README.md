@@ -99,5 +99,6 @@ I like building systems that help research move with more clarity: simulation fo
 </p>
 
 <p align="center">
-  <em>A small research homepage for molecules, documents, and the beautiful discipline of making complicated things understandable.</em>
+  <em>"What I cannot create, I do not understand."</em><br />
+  — Richard Feynman
 </p>
