@@ -37,8 +37,6 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Research Compass
 
-<img src="assets/pets/cat-compass.gif" alt="Pixel cat walking and looking around" width="88" align="right" />
-
 | Direction | What I am exploring |
 | --- | --- |
 | Molecular dynamics | GROMACS workflows, CHARMM-GUI systems, reproducible simulation organization |
@@ -47,11 +45,11 @@ I like building systems that help research move with more clarity: simulation fo
 | Biomedical AI | OCR, PDF extraction, local chatbot tools, and scientific document intelligence |
 | Medical physics | Computational foundations for future graduate study and applied biomedical modeling |
 
+<p align="right">
+  <img src="assets/pets/cat-compass.gif" alt="Pixel cat walking back and forth" width="88" />
+</p>
+
 ## Toolkit
-
-<img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" align="left" />
-
-<br clear="both" />
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -66,9 +64,11 @@ I like building systems that help research move with more clarity: simulation fo
   <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
 </p>
 
-## Featured Work
+<p align="right">
+  <img src="assets/pets/cat-toolkit.gif" alt="Pixel cat swatting playfully" width="88" />
+</p>
 
-<img src="assets/pets/cat-featured.gif" alt="Pixel cat walking" width="88" align="right" />
+## Featured Work
 
 | Project | What it means |
 | --- | --- |
@@ -76,6 +76,10 @@ I like building systems that help research move with more clarity: simulation fo
 | [LiSPER-BEADS](https://github.com/jackyissocute/LiSPER-BEADS) | Supporting work connected to LiSPER, with attention to molecular systems, project structure, and research artifacts. |
 | [LiSPER-Dashboard](https://github.com/jackyissocute/LiSPER-Dashboard) | A dashboard-style interface for making LiSPER outputs easier to inspect and communicate. |
 | [Supplier Document Intelligence](https://github.com/jackyissocute/supplier-doc-intelligence) | OCR, PDF extraction, and AI-assisted document processing inspired by an externship-style Pfizer project. |
+
+<p align="right">
+  <img src="assets/pets/cat-featured.gif" alt="Pixel cat walking back and forth" width="88" />
+</p>
 
 ## Current Focus
 
@@ -88,13 +92,13 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## GitHub Snapshot
 
-<img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" align="right" />
-
-<br clear="both" />
-
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=jackyissocute&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="Jacky's GitHub stats" />
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jackyissocute&layout=compact&theme=tokyonight&hide_border=true" alt="Jacky's most used GitHub languages" />
+</p>
+
+<p align="right">
+  <img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" />
 </p>
 
 ## Connect

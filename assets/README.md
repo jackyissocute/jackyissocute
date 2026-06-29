@@ -26,7 +26,7 @@ This writes `assets/banner.gif`. GSAP runs at build time only — GitHub serves 
 
 ## Section Pixel Cats
 
-The profile README embeds one animated gray tabby cat per section. Cats float beside content with `align="left"` or `align="right"` so text wraps around them; section titles stay plain `##` headings. Cats on the right are horizontally flipped so they face inward toward the text.
+The profile README embeds one animated gray tabby cat per section. Prose sections (About Me, Current Focus) use float wrap; table and badge sections place the cat below the content, aligned right. Walk and run pets use a ping-pong loop (right, turn, left, turn).
 
 | File | Section | Source animation |
 | --- | --- | --- |

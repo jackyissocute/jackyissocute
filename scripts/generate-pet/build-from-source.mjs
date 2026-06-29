@@ -93,23 +93,44 @@ function upscaleFrame(frameCanvas) {
   return upscale;
 }
 
+function buildFrameSequence(pet) {
+  const n = pet.frameCount;
+  const pause = pet.turnPause ?? 2;
+
+  if (pet.animation === "pingpong") {
+    const seq = [];
+    for (let i = 0; i < n; i++) seq.push({ index: i, flip: false });
+    for (let p = 0; p < pause; p++) seq.push({ index: n - 1, flip: false });
+    for (let i = n - 2; i >= 0; i--) seq.push({ index: i, flip: true });
+    for (let p = 0; p < pause; p++) seq.push({ index: 0, flip: true });
+    return seq;
+  }
+
+  return Array.from({ length: n }, (_, i) => ({
+    index: i,
+    flip: pet.flip ?? false,
+  }));
+}
+
 async function buildPetGif(pet) {
   const sourcePath = join(SOURCE_DIR, pet.source);
   const strip = await loadImage(sourcePath);
   const fps = pet.fps ?? 10;
   const frameMs = Math.round(1000 / fps);
+  const sequence = buildFrameSequence(pet);
 
   const gif = GIFEncoder();
 
-  for (let i = 0; i < pet.frameCount; i++) {
-    const frame = extractFrame(strip, i, pet.flip ?? false);
+  for (let i = 0; i < sequence.length; i++) {
+    const { index, flip } = sequence[i];
+    const frame = extractFrame(strip, index, flip);
     const canvas = upscaleFrame(frame);
     const { data, width, height } = canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height);
     const palette = quantize(data, 64, QUANT_OPTS);
-    const index = applyPalette(data, palette, "rgba4444");
+    const encoded = applyPalette(data, palette, "rgba4444");
     const transparentIndex = findTransparentIndex(palette);
 
-    gif.writeFrame(index, width, height, {
+    gif.writeFrame(encoded, width, height, {
       palette,
       delay: frameMs,
       repeat: i === 0 ? 0 : undefined,
@@ -120,20 +141,21 @@ async function buildPetGif(pet) {
   }
 
   gif.finish();
-  return gif.bytes();
+  return { bytes: gif.bytes(), frameTotal: sequence.length };
 }
 
 export async function buildAllPets() {
   const results = [];
 
   for (const pet of SECTION_PETS) {
-    const bytes = await buildPetGif(pet);
+    const { bytes, frameTotal } = await buildPetGif(pet);
     const outPath = join(OUT_DIR, pet.file);
     writeFileSync(outPath, Buffer.from(bytes));
     const sizeKb = (bytes.length / 1024).toFixed(1);
     const dims = `${FRAME_SIZE * OUTPUT_SCALE}x${FRAME_SIZE * OUTPUT_SCALE}`;
-    results.push({ ...pet, outPath, sizeKb, dims });
-    console.log(`  ${pet.file} (${sizeKb} KB, ${dims}, ${pet.frameCount} frames @ ${pet.fps ?? 10} fps${pet.flip ? ", flipped" : ""})`);
+    results.push({ ...pet, outPath, sizeKb, dims, frameTotal });
+    const mode = pet.animation === "pingpong" ? "pingpong" : "loop";
+    console.log(`  ${pet.file} (${sizeKb} KB, ${dims}, ${frameTotal} frames @ ${pet.fps ?? 10} fps, ${mode})`);
   }
 
   return results;
