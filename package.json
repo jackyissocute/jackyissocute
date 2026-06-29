@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "generate:banner": "node scripts/generate-banner/render.mjs",
-    "generate:divider": "node scripts/generate-banner/generate-divider.mjs"
+    "generate:divider": "node scripts/generate-banner/generate-divider.mjs",
+    "generate:pet": "node scripts/generate-pet/render.mjs"
   },
   "devDependencies": {
     "@napi-rs/canvas": "^0.1.65",

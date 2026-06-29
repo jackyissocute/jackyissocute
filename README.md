@@ -27,6 +27,10 @@
   <img src="assets/neon-divider.gif" alt="" width="100%" />
 </p>
 
+<p align="center">
+  <img src="assets/pixel-cat.gif" alt="A small pixel cat walking and resting" width="320" />
+</p>
+
 ## About Me
 
 I am Jacky Lin, an undergraduate student at Duke Kunshan University interested in the quiet places where physics, biology, and computation begin to overlap. My work centers on molecular simulation, research automation, and AI-assisted tools that make scientific workflows more reproducible and readable.
