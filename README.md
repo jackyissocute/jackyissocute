@@ -110,8 +110,8 @@ I like building systems that help research move with more clarity: simulation fo
 ## GitHub Snapshot
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=jackyissocute&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="Jacky's GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jackyissocute&layout=compact&theme=tokyonight&hide_border=true" alt="Jacky's most used GitHub languages" />
+  <img height="165" src="https://github-readme-stats.shion.dev/api?username=jackyissocute&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="Jacky's GitHub stats" />
+  <img height="165" src="https://github-readme-stats.shion.dev/api/top-langs/?username=jackyissocute&layout=compact&theme=tokyonight&hide_border=true" alt="Jacky's most used GitHub languages" />
 </p>
 
 ## Connect
