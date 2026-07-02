@@ -27,7 +27,7 @@ The profile README embeds three cozy pixel cat GIFs:
 | --- | --- | --- |
 | `pets/cat-calico.gif` | About Me | Lying calico cat; black background stripped for transparency |
 | `pets/cat-birdwatch.gif` | Connect footer | Orange cat watching a hummingbird |
-| `pets/cat-headphones.gif` | Toolkit | Pixelated cat with headphones nodding on a train seat |
+| `pets/cat-headphones.gif` | Toolkit | Cropped cat with headphones nodding on a train seat |
 
 ### Legacy skristi cats
 
@@ -60,7 +60,7 @@ To regenerate the pixelated headphones cat from Downloads:
 npm run process:toolkit-cat
 ```
 
-This crops the source GIF, pixelates it to 112px width, and writes `assets/pets/cat-headphones.gif`.
+This crops the source GIF at original resolution and writes `assets/pets/cat-headphones.gif`.
 
 ## External Dynamic Services
 

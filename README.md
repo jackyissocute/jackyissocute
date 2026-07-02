@@ -68,8 +68,8 @@ I like building systems that help research move with more clarity: simulation fo
 <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
 
 </td>
-<td width="130" valign="middle" align="right">
-<img src="assets/pets/cat-headphones.gif?v=2" alt="Pixel cat with headphones nodding along" width="112" />
+<td width="140" valign="middle" align="right">
+<img src="assets/pets/cat-headphones.gif?v=3" alt="Cat with headphones nodding along" width="120" />
 </td>
 </tr>
 </table>
