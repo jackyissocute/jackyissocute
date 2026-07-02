@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.gif" alt="Cyberpunk pixel banner — Jacky Lin, Night City, Dev Mode" width="100%" />
+  <img src="assets/banner.gif" alt="Cozy pixel art desk scene with a cat at night" width="100%" />
 </p>
 
 <h1 align="center">Jacky Lin</h1>
@@ -11,20 +11,16 @@
 
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3200&pause=900&color=00F0FF&center=true&vCenter=true&width=760&lines=Compiling+simulation+pipelines;Exploring+molecular+data+nodes;Building+AI+tools+for+research;Leveling+up+toward+medical+physics" alt="Animated typing text describing Jacky's research interests" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3200&pause=900&color=C4A882&center=true&vCenter=true&width=760&lines=Compiling+simulation+pipelines;Exploring+molecular+data+nodes;Building+AI+tools+for+research;Leveling+up+toward+medical+physics" alt="Animated typing text describing Jacky's research interests" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/jackyissocute">
-    <img src="https://img.shields.io/badge/GitHub-jackyissocute-0D0221?style=for-the-badge&logo=github&logoColor=00F0FF" alt="GitHub profile badge" />
+    <img src="https://img.shields.io/badge/GitHub-jackyissocute-2C2419?style=for-the-badge&logo=github&logoColor=D4A574" alt="GitHub profile badge" />
   </a>
-  <img src="https://img.shields.io/badge/Duke%20Kunshan%20University-Research-7B2CBF?style=for-the-badge" alt="Duke Kunshan University research badge" />
-  <img src="https://img.shields.io/badge/Focus-Biophysics%20%7C%20AI%20Tools-FF2A6D?style=for-the-badge" alt="Biophysics and AI tools focus badge" />
-</p>
-
-<p align="center">
-  <img src="assets/pets/cat-compass.gif?v=3" alt="Pixel cat walking across the section" width="100%" />
+  <img src="https://img.shields.io/badge/Duke%20Kunshan%20University-Research-6B5344?style=for-the-badge" alt="Duke Kunshan University research badge" />
+  <img src="https://img.shields.io/badge/Focus-Biophysics%20%7C%20AI%20Tools-B8734A?style=for-the-badge" alt="Biophysics and AI tools focus badge" />
 </p>
 
 ## About Me
@@ -32,7 +28,7 @@
 <table>
 <tr>
 <td width="128" valign="middle" align="center">
-<img src="assets/pets/cat-about.gif" alt="Pixel cat sitting and blinking" width="120" />
+<img src="assets/pets/cat-calico.gif" alt="Pixel calico cat resting" width="120" />
 </td>
 <td valign="middle">
 
@@ -56,10 +52,6 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Toolkit
 
-<table>
-<tr>
-<td valign="middle">
-
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
 <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
 <img src="https://img.shields.io/badge/GROMACS-1F6FEB?style=flat-square" alt="GROMACS" />
@@ -70,13 +62,6 @@ I like building systems that help research move with more clarity: simulation fo
 <img src="https://img.shields.io/badge/Linux%20%2F%20Terminal-111827?style=flat-square&logo=gnubash&logoColor=white" alt="Linux and terminal" />
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
 <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
-
-</td>
-<td width="96" valign="middle" align="right">
-<img src="assets/pets/cat-toolkit.gif?v=2" alt="Pixel cat swatting toward the toolkit badges" width="88" />
-</td>
-</tr>
-</table>
 
 ## Featured Work
 
@@ -89,21 +74,10 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Current Focus
 
-<table>
-<tr>
-<td width="128" valign="middle" align="center">
-<img src="assets/pets/cat-focus.gif" alt="Pixel cat running playfully" width="120" />
-</td>
-<td valign="middle">
-
 - Improving computational research workflows so simulation projects are easier to reproduce, review, and extend.
 - Building Python and R analysis habits around molecular data, document data, and research notes.
 - Studying molecular dynamics, molecular docking, and biomedical computation with a future medical physics path in mind.
 - Using AI agents carefully: not as shortcuts for understanding, but as tools for documentation, coding support, and scientific organization.
-
-</td>
-</tr>
-</table>
 
 ## GitHub Snapshot
 
@@ -116,13 +90,13 @@ I like building systems that help research move with more clarity: simulation fo
 
 <p align="center">
   <a href="https://github.com/jackyissocute">
-    <img src="https://img.shields.io/badge/GitHub-jackyissocute-0D0221?style=for-the-badge&logo=github&logoColor=00F0FF" alt="GitHub link" />
+    <img src="https://img.shields.io/badge/GitHub-jackyissocute-2C2419?style=for-the-badge&logo=github&logoColor=D4A574" alt="GitHub link" />
   </a>
   <a href="mailto:jackieeelin929@gmail.com">
     <img src="https://img.shields.io/badge/Email-jackieeelin929%40gmail.com-475569?style=for-the-badge&logo=gmail&logoColor=white" alt="Email link" />
   </a>
   <a href="https://jackyissocute.github.io/WhoIsJacky">
-    <img src="https://img.shields.io/badge/Portfolio-WhoIsJacky-7B2CBF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio link" />
+    <img src="https://img.shields.io/badge/Portfolio-WhoIsJacky-6B5344?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio link" />
   </a>
   <a href="https://www.linkedin.com/in/jackylinhelpsualot">
     <img src="https://img.shields.io/badge/LinkedIn-jackylinhelpsualot-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn link" />
@@ -136,11 +110,11 @@ I like building systems that help research move with more clarity: simulation fo
 <strong>Research Mantra</strong><br />
 <em>"What I cannot create, I do not understand."</em><br />
 — Richard Feynman<br />
-<sub>Pixel cat sprites by <a href="https://opengameart.org/content/gray-cat-asset-pack">Krystsina Staselovich</a> (CC-BY)</sub>
+<sub>Pixel art GIFs curated for a cozy desk-and-cat theme.</sub>
 
 </td>
 <td valign="bottom">
-<img src="assets/pets/cat-snapshot.gif" alt="Pixel cat resting calmly" width="88" />
+<img src="assets/pets/cat-birdwatch.gif" alt="Pixel cat watching a hummingbird" width="100" />
 </td>
 </tr>
 </table>
