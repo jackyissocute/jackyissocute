@@ -33,8 +33,8 @@ export const TRAVERSE_PETS = [
     file: "cat-compass.gif",
     source: "walk.png",
     frameCount: 7,
-    fps: 10,
-    stepPx: 14,
+    fps: 16,
+    stepPx: 9,
     turnPause: 2,
   },
 ];

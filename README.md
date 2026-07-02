@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/neon-divider.gif" alt="" width="100%" />
+  <img src="assets/pets/cat-compass.gif?v=3" alt="Pixel cat walking across the section" width="100%" />
 </p>
 
 ## About Me
@@ -53,8 +53,6 @@ I like building systems that help research move with more clarity: simulation fo
 | DNA topology | Supercoiling-related questions and computational representations of structure |
 | Biomedical AI | OCR, PDF extraction, local chatbot tools, and scientific document intelligence |
 | Medical physics | Computational foundations for future graduate study and applied biomedical modeling |
-
-<img src="assets/pets/cat-compass.gif?v=2" alt="Pixel cat walking across the section" width="100%" />
 
 ## Toolkit
 

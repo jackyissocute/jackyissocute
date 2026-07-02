@@ -22,7 +22,7 @@ export const SECTION_PETS = [
     file: "cat-compass.gif",
     source: "walk.png",
     frameCount: 7,
-    fps: 10,
+    fps: 16,
     animation: "traverse",
   },
   {
