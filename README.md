@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3200&pause=900&color=C4A882&center=true&vCenter=true&width=760&lines=Compiling+simulation+pipelines;Exploring+molecular+data+nodes;Building+AI+tools+for+research;Leveling+up+toward+medical+physics" alt="Animated typing text describing Jacky's research interests" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=3200&pause=900&color=B8734A&center=true&vCenter=true&width=800&lines=Compiling+simulation+pipelines;Exploring+molecular+data+nodes;Building+AI+tools+for+research;Leveling+up+toward+medical+physics" alt="Animated typing text describing Jacky's research interests" />
   </a>
 </p>
 
