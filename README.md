@@ -52,6 +52,10 @@ I like building systems that help research move with more clarity: simulation fo
 
 ## Toolkit
 
+<table>
+<tr>
+<td valign="middle">
+
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
 <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
 <img src="https://img.shields.io/badge/GROMACS-1F6FEB?style=flat-square" alt="GROMACS" />
@@ -62,6 +66,13 @@ I like building systems that help research move with more clarity: simulation fo
 <img src="https://img.shields.io/badge/Linux%20%2F%20Terminal-111827?style=flat-square&logo=gnubash&logoColor=white" alt="Linux and terminal" />
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
 <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
+
+</td>
+<td width="130" valign="middle" align="right">
+<img src="assets/pets/cat-headphones.gif?v=2" alt="Pixel cat with headphones nodding along" width="112" />
+</td>
+</tr>
+</table>
 
 ## Featured Work
 

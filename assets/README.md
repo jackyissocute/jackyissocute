@@ -21,12 +21,13 @@ The legacy cyberpunk banner generator still lives in `scripts/generate-banner/` 
 
 ## Section Pixel Cats
 
-The profile README embeds two cozy pixel cat GIFs:
+The profile README embeds three cozy pixel cat GIFs:
 
 | File | Section | Notes |
 | --- | --- | --- |
 | `pets/cat-calico.gif` | About Me | Lying calico cat; black background stripped for transparency |
 | `pets/cat-birdwatch.gif` | Connect footer | Orange cat watching a hummingbird |
+| `pets/cat-headphones.gif` | Toolkit | Pixelated cat with headphones nodding on a train seat |
 
 ### Legacy skristi cats
 
@@ -50,6 +51,16 @@ To re-import the cozy banner and cat GIFs from Downloads:
 ```bash
 node scripts/import-cozy-assets.mjs
 ```
+
+### Processing toolkit cat
+
+To regenerate the pixelated headphones cat from Downloads:
+
+```bash
+npm run process:toolkit-cat
+```
+
+This crops the source GIF, pixelates it to 112px width, and writes `assets/pets/cat-headphones.gif`.
 
 ## External Dynamic Services
 
