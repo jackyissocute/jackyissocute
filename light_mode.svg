@@ -36,8 +36,8 @@ text, tspan {white-space: pre; font-variant-ligatures: none;}
 </text>
 <g transform="translate(-24 8)">
 <text x="416.0" y="21" fill="#24292f" font-size="13.5px" xml:space="preserve">
-<tspan x="416.0" y="21.0">jacky@lin</tspan> ------------------------------------------------
-<tspan x="416.0" y="38.0">-----------</tspan>
+<tspan x="416.0" y="21.0">jacky.lin</tspan> ------------------------------------------------
+<tspan x="416.0" y="38.0"></tspan>
 <tspan x="416.0" y="55.0" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">macOS, Linux</tspan>
 <tspan x="416.0" y="72.0" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">2 years, 9 months, 18 days</tspan>
 <tspan x="416.0" y="89.0" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">Duke Kunshan University</tspan>
